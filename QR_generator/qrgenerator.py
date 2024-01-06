@@ -7,7 +7,7 @@ qr = qrcode.QRCode(
     border = 1  #gap between the qr code and the white border
 )
 
-data = 'THIS QR CODE IS CREATED BY SOHAM KEKRE'#https://www.geeksforgeeks.org/python-programming-language/?ref=shm
+data = 'I LOVE YOU'#https://www.geeksforgeeks.org/python-programming-language/?ref=shm
 
 qr.add_data(data)
 qr.make(fit=True)
