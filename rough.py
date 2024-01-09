@@ -9,4 +9,3 @@ def inp_to_otp (k,s):
 k = int(input("Number of elements in array "))
 s = str(input("Enter the array "))
 arr,k = inp_to_otp(k,s)
-
