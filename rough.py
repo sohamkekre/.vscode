@@ -1,4 +1,11 @@
+k = int(input("Number of elements in array "))
+s = str(input("Enter the array "))
+
 def inp_to_otp (k,s):
+    arr = list(map(int,s.split(" ")))
+    return arr,k
+
+def inp_to_otp2(k,s):
     s = s.split(' ')
     arr = []
     for i in s:
@@ -6,6 +13,6 @@ def inp_to_otp (k,s):
         arr.append(x)
     return arr,k
 
-k = int(input("Number of elements in array "))
-s = str(input("Enter the array "))
-arr,k = inp_to_otp(k,s)
+# arr,k = inp_to_otp(k,s)
+# print(arr,k)
+# arr,k = inp_to_otp2(k,s)
