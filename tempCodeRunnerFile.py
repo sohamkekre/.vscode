@@ -1,6 +1,4 @@
-d(n,s,k):
-#     str = 'ABCDEFGHIJKLMNOPQRSTUWXYZ'
-
-#     for i in s:
-        
-#     print(s)
+t:
+    #     x = t.index(i)
+    #     t.pop(x)
+    #     prin
