@@ -1,14 +1,15 @@
-nums = list(map(int,input().split(" ")))
+nums = dict(map(int,input().split(" ")))
+print(nums)
 
 target = int(input())
 
-i = 0
-j = 1
+for n in nums:
+    subt = target - n
+    if subt in nums:
+        if nums.index(n) != nums.index(subt):
+            print(f"[{nums.index(n)},{nums.index(subt)}]")
+            break
+    else:
+        continue
 
-for j in range(len(nums)):
-    while i < j:
-        if nums[i] + nums[j] == target:
-            print(f"[{nums[i]}],[{nums[j]}]")
-    i += 1
-    
-    
+# still correction needed with same elements in an array
