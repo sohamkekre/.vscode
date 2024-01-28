@@ -1,20 +1,13 @@
-nums = dict(map(int,input().split(" ")))
-print(nums)
+nums = list(map(int,input().split(" ")))
 
 target = int(input())
+nums_dict = {}
+for i,num in enumerate(nums):
+    nums_dict[i] = num
 
 for n in nums:
-    subt = target - n
-    if subt in nums:
-        if nums.index(n) != nums.index(subt):
-            print(f"[{nums.index(n)},{nums.index(subt)}]")
-            break
-    else:
-        continue
+    subt=target - n 
+    if subt in nums_dict.values():
+        print(nums_dict.keys[n],nums_dict.keys[subt])
 
-# still correction needed with same elements in an array
-    
-
-
-
-    
+# correction needed as we cannot print the key of a value in the nums_dict        
