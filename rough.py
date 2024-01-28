@@ -13,3 +13,8 @@ for n in nums:
         continue
 
 # still correction needed with same elements in an array
+    
+
+
+
+    
