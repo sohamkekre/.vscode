@@ -1,4 +1,26 @@
-# nums = [2,7,11,15], target = 9
+nums = list(map(int,input().split(" ")))
+
+target = int(input())
+
+def two_sum(nums,target):
+    nums_dict = {}
+    for i,num in enumerate(nums):
+        nums_dict[i] = num
+
+    for n in nums:
+        subt=target - n 
+        if subt in nums_dict.values():
+            for key , value in nums_dict.items():
+                if subt == value:
+                    if nums.index(n) == key:
+                        pass
+                    else:
+                        return(print(nums.index(n),key))
+
+two_sum(nums,target)
+
+# second solution function.
+
 def twosum(nums,target):
     complimentMap = dict()
     for i in range(len(nums)):
@@ -9,10 +31,4 @@ def twosum(nums,target):
         else:
             complimentMap[compliment]=i #{7,0} 
 
-twosum([2,7,11,15],9)
-
-# for i in range(len(nums)):
-    #     for j in range (i+1,len(nums)):
-    #         sum = nums[i] + nums[j]
-    #         if sum == target :
-    #             print([i,j])
+twosum(nums,target)
