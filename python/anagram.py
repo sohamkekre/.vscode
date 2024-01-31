@@ -12,12 +12,16 @@ else:
     print("true")
 
 # OR 
-
+lst = []
 if len(s) != len(t):
-    print("True")
+    print("False")
 for idx in s:
     if s.count(idx) != t.count(idx):
-        print("False")
+        lst.append(1)
     else:
-        print("True")
+        lst.append(0)
+if 1 in lst:
+    print("False")
+else:
+    print("True")
 
