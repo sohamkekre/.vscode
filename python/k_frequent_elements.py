@@ -1,18 +1,22 @@
 nums = list(map(int,input().split(" ")))
 k = int(input())
 
-def k_frequent(nums,k):
-    dict = {}
-    lst = []
-    for n in nums:
-        if n not in dict.keys():
-            dict[n] = 1
-        else:
-            dict[n] += 1
+dict = {}
+final = []
 
-    keys = list(dict.keys())
-    values = list(dict.values())
-    print(dict)
-    
-
-k_frequent(nums,k)
+for i in nums:
+    if i in dict:
+        dict[i] += 1
+    else:
+        dict[i] = 1
+# print(dict)
+keys = list(dict.keys())
+values = list(dict.values())
+while k > 0:
+    max_value = max(values)
+    ind = values.index(max_value)
+    final.append(keys[ind])
+    values.pop(ind)
+    keys.pop(ind)
+    k -= 1
+print(final)
