@@ -1,13 +1,15 @@
-#include <iostream>
-#include <cmath>
+#include<iostream>
 using namespace std;
 
 int main(){
-int x,y;
-cout << "Enter x and y"<<endl;
-cin >> x;
-cin >> y; 
-cout <<"maximum of "<<+max(x,y)<<endl;
-cout<<sqrt(x*y)<<endl;
-cout << (x==y);
+    int arr_size;
+    cout<<"Enter the size of array: ";
+    cin>>arr_size;
+    int arr[arr_size];
+    for (int i=0;i<arr_size;++i){
+        cin>>arr[i];
+    }
+    for(int i : arr)
+    // cout<<"position"<<i<<" of array: "<<arr[i]<<endl;
+    cout << "array inputs "<<i<<endl;
 }
